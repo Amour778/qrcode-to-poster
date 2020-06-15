@@ -1,0 +1,49 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "海报生成工具"
+			}
+		}, {
+			"path": "pages/basic/basic",
+			"style": {
+				"navigationBarTitleText": "参数配置"
+			}
+		}, {
+			"path": "pages/adminTool/adminTool",
+			"style": {
+				"navigationBarTitleText": "管理员设置界面"
+			}
+		}, {
+			"path": "pages/test/test",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "海报生成工具",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": true
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 3, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "test模式", //模式名称
+			"path": "pages/test/test", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		},{
+			"name": "adminTool模式", //模式名称
+			"path": "pages/adminTool/adminTool", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		},{
+			"name": "basic模式", //模式名称
+			"path": "pages/basic/basic", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}
+		]
+	}
+}
